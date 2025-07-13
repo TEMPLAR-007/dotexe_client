@@ -2,10 +2,17 @@ import { EmailTemplate } from '@/components/EmailTemplate';
 import { Resend } from 'resend';
 import * as React from 'react';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
 export async function POST(request: Request) {
     try {
+        if (!resend) {
+            return Response.json(
+                { error: 'Email service is not configured' },
+                { status: 500 }
+            );
+        }
+
         const { name, email, subject, message } = await request.json();
 
         if (!name || !email || !subject || !message) {
@@ -15,16 +22,9 @@ export async function POST(request: Request) {
             );
         }
 
-        if (!resend) {
-            return Response.json(
-                { error: 'Resend not configured' },
-                { status: 500 }
-            );
-        }
-
         const { data, error } = await resend.emails.send({
-            from: 'DOTEXE Contact Form <onboarding@resend.dev>',
-            to: ['arefin.khan8364@gmail.com'], // Replace with your email
+            from: 'DOTEXE <onboarding@resend.dev>',
+            to: ['karefin69@gmail.com'],
             subject: `New Contact Form Message: ${subject}`,
             react: EmailTemplate({
                 name,
