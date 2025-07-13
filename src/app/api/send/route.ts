@@ -24,7 +24,7 @@ export async function POST(request: Request) {
 
         const { data, error } = await resend.emails.send({
             from: 'DOTEXE <onboarding@resend.dev>',
-            to: ['karefin69@gmail.com'],
+            to: ['accounts@dotexe.com.au'],
             subject: `New Contact Form Message: ${subject}`,
             react: EmailTemplate({
                 name,

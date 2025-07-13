@@ -41,7 +41,7 @@ const About = () => {
                                         />
                                     </div>
                                 </div>
-                                <div className="space-y-4 mt-8">
+                                <div className="space-y-4 pt-8">
                                     <div className="bg-gradient-to-br from-blue-50 to-teal-50 rounded-lg p-2">
                                         <Image
                                             src={aboutImages[2]}
@@ -74,7 +74,7 @@ const About = () => {
                             About <span className="bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">DOTEXE</span>
                         </h2>
                         <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            At DOTEXE, we are passionate about empowering businesses through innovative IT solutions. With years of experience in the industry, we understand that every business has unique technological needs and challenges.
                         </p>
                         <div className="space-y-6">
                             <div className="flex items-start">
@@ -85,7 +85,7 @@ const About = () => {
                                 </div>
                                 <div>
                                     <h3 className="text-lg font-semibold text-gray-900">Expert Team</h3>
-                                    <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
+                                    <p className="text-gray-600">Our certified professionals bring extensive experience in IT infrastructure, cloud solutions, and cybersecurity to deliver exceptional results.</p>
                                 </div>
                             </div>
                             <div className="flex items-start">
@@ -96,7 +96,7 @@ const About = () => {
                                 </div>
                                 <div>
                                     <h3 className="text-lg font-semibold text-gray-900">Customer-Centric Approach</h3>
-                                    <p className="text-gray-600">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+                                    <p className="text-gray-600">We prioritize understanding your business goals and challenges to provide tailored solutions that drive growth and efficiency.</p>
                                 </div>
                             </div>
                             <div className="flex items-start">
@@ -107,7 +107,7 @@ const About = () => {
                                 </div>
                                 <div>
                                     <h3 className="text-lg font-semibold text-gray-900">Innovative Solutions</h3>
-                                    <p className="text-gray-600">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                                    <p className="text-gray-600">We stay at the forefront of technology to provide cutting-edge solutions that keep your business competitive in the digital age.</p>
                                 </div>
                             </div>
                         </div>
