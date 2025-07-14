@@ -22,7 +22,7 @@ const Header = () => {
                         <div className="relative flex items-center">
                             <div className="w-16 h-16 rounded-full shadow-lg ring-1 ring-gray-200/50 overflow-hidden flex items-center justify-center">
                                 <Image
-                                    src="/images/logo.jpg"
+                                    src="/images/logo.png"
                                     alt="DOTEXE Logo"
                                     width={60}
                                     height={60}
