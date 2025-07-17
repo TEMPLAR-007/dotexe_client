@@ -14,6 +14,8 @@ const Header = () => {
         setIsMenuOpen(false);
     };
 
+    const navButtonClass = "text-gray-300 hover:text-blue-400 transition-colors text-sm";
+
     return (
         <header className="fixed top-0 left-0 right-0 bg-gray-900/80 backdrop-blur-sm z-50 border-b border-gray-700/50">
             <div className="max-w-7xl mx-auto px-6">
@@ -26,44 +28,42 @@ const Header = () => {
                                     alt="DOTEXE Logo"
                                     width={60}
                                     height={60}
-                                    objectFit="contain"
+                                    className="object-contain"
                                 />
                             </div>
-                            <a href="#" className="ml-3 text-2xl font-extrabold bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
+                            <a onClick={() => scrollToSection('home')} className="ml-3 text-2xl font-extrabold bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent cursor-pointer">
                                 DOTEXE
                             </a>
                         </div>
                     </div>
 
-                    {/* Desktop Navigation */}
                     <nav className="hidden md:flex items-center space-x-10">
                         <button
                             onClick={() => scrollToSection('home')}
-                            className="text-gray-300 hover:text-blue-400 transition-colors text-[15px]"
+                            className={navButtonClass}
                         >
                             Home
                         </button>
                         <button
                             onClick={() => scrollToSection('services')}
-                            className="text-gray-300 hover:text-blue-400 transition-colors text-[15px]"
+                            className={navButtonClass}
                         >
                             Services
                         </button>
                         <button
                             onClick={() => scrollToSection('about')}
-                            className="text-gray-300 hover:text-blue-400 transition-colors text-[15px]"
+                            className={navButtonClass}
                         >
                             About
                         </button>
                         <button
                             onClick={() => scrollToSection('contact')}
-                            className="text-gray-300 hover:text-blue-400 transition-colors text-[15px]"
+                            className={navButtonClass}
                         >
                             Contact
                         </button>
                     </nav>
 
-                    {/* Mobile Menu Button */}
                     <button
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         className="md:hidden text-gray-300 hover:text-blue-400"
@@ -74,31 +74,30 @@ const Header = () => {
                     </button>
                 </div>
 
-                {/* Mobile Navigation */}
                 {isMenuOpen && (
                     <nav className="md:hidden py-4 border-t border-gray-700/50">
                         <div className="flex flex-col space-y-4">
                             <button
                                 onClick={() => scrollToSection('home')}
-                                className="text-gray-300 hover:text-blue-400 transition-colors"
+                                className={navButtonClass}
                             >
                                 Home
                             </button>
                             <button
                                 onClick={() => scrollToSection('services')}
-                                className="text-gray-300 hover:text-blue-400 transition-colors"
+                                className={navButtonClass}
                             >
                                 Services
                             </button>
                             <button
                                 onClick={() => scrollToSection('about')}
-                                className="text-gray-300 hover:text-blue-400 transition-colors"
+                                className={navButtonClass}
                             >
                                 About
                             </button>
                             <button
                                 onClick={() => scrollToSection('contact')}
-                                className="text-gray-300 hover:text-blue-400 transition-colors"
+                                className={navButtonClass}
                             >
                                 Contact
                             </button>

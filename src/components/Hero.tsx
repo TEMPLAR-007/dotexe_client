@@ -6,7 +6,6 @@ import Image from 'next/image';
 const Hero = () => {
     return (
         <section id="home" className="relative pt-20 pb-16 md:pt-28 md:pb-24 overflow-hidden">
-            {/* Background decoration */}
             <div className="absolute top-0 right-0 -z-10 w-1/3 h-1/3 bg-gradient-to-l from-blue-500/20 to-transparent rounded-bl-full opacity-70" />
             <div className="absolute bottom-0 left-0 -z-10 w-1/2 h-1/2 bg-gradient-to-tr from-teal-500/20 to-transparent rounded-tr-full opacity-60" />
 
@@ -45,7 +44,6 @@ const Hero = () => {
                                     alt="IT Solutions"
                                     width={800}
                                     height={600}
-                                    unoptimized={true}
                                     className="w-full h-auto"
                                 />
                             </div>
